@@ -1,0 +1,41 @@
+<%- include('includes/head'); %>
+<%- include('includes/nav'); %>
+
+<div class="container">
+  <div class="row">
+        <div class="col-lg-8 my-3">
+            <h1 class="text-center">Contato</h1>
+            <p class="text-center lead">Crie ou edite seu contato abaixo</p>
+            <%- include('includes/footer'); %> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg">
+            <h4>Cadastre seu contato</h4>
+            <p>Se você ainda não tem conta, preencha o formulário abaixo</p>
+            <!--Formulário de cadastro-->
+            <form action="/contato/register" method="post">
+             
+              <%= contato.nome %>
+                <div class="mb-3">
+                  <label for="nome" class="form-label">Nome:</label>
+                  <!-- FALTA FAZER COM QUE O CÓDIGO ABAIXO PEGUE-->
+                  <input type="text" value= "<%= contato.nome  %>" class="form-control" name="nome">
+                </div>
+                <div class="mb-3">
+                  <label for="sobrenome" class="form-label">Sobrenome</label>
+                  <input type="text" class="form-control" name="sobrenome">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="telefone" class="form-label">Telefone:</label>
+                  <input type="text" class="form-control" name="telefone">
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar </button>
+            </form>
+        </div>
+    </div>
+</div>
