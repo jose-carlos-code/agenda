@@ -12,9 +12,9 @@ exports.register = async function(req, resp){
             req.flash('errors', login.errors);
             console.log(login.errors);
             req.session.save(function(){
-                return resp.redirect('back');//redirecionar para a página anterior
+                return resp.redirect('back');//redirecionar para a página anterior 
             });
-            return;
+            return;                                                                                                                                                     
         }
         req.flash('success', 'Seu usuário foi criado com sucesso!');
         req.session.save(function(){
